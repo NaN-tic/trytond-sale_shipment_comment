@@ -3,11 +3,11 @@
 # copyright notices and license terms.
 from trytond.model import fields
 from trytond.pool import PoolMeta
+
 __all__ = ['Sale']
 
 
-class Sale:
-    __metaclass__ = PoolMeta
+class Sale(metaclass=PoolMeta):
     __name__ = 'sale.sale'
     shipment_comment = fields.Text('Shipment Comment')
 
