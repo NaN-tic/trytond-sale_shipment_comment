@@ -12,6 +12,7 @@ from configparser import ConfigParser
 MODULE = 'sale_shipment_comment'
 PREFIX = 'trytonzz'
 MODULE2PREFIX = {
+    'party_comment': 'trytonspain',
     'stock_comment': 'trytonzz',
     }
 
@@ -62,6 +63,12 @@ dependency_links = [
             'branch': branch,
             'series': series,
             }),
+        ('hg+https://bitbucket.org/trytonspain/'
+            'trytond-party_comment@%(branch)s'
+            '#egg=trytonspain-party_comment-%(series)s' % {
+                'branch': branch,
+                'series': series,
+                }),
     ]
 if minor_version % 2:
     # Add development index for testing with proteus
