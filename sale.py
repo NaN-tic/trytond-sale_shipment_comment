@@ -13,8 +13,7 @@ class Sale(metaclass=PoolMeta):
     shipment_comment = fields.Text('Shipment Comment',
         states={
             'readonly': Eval('state') != 'draft',
-            },
-        depends=['state'])
+            })
 
     def _get_shipment_sale(self, Shipment, key):
         key += (('comment', self.shipment_comment),)
